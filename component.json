@@ -1,6 +1,6 @@
 {
     "name": "chic",
-    "version": "0.0.1",
+    "version": "0.0.2",
 
     "description": "Chic is an extremely simple class-like interface to JavaScript prototypal inheritance",
     "keywords": [ "class", "classes", "extend", "inheritance", "oop", "prototypal", "prototype" ],
