@@ -145,6 +145,12 @@ Development
 * Lint code with `npm run-script lint`
 
 
+Credit
+------
+
+This library was inspired by John Resig's great [Simple JavaScript Inheritance post][inspiration].
+
+
 License
 -------
 
@@ -153,6 +159,7 @@ Chic is licensed under the [MIT][mit] license.
 
 
 [component]: https://github.com/component/component
+[inspiration]: http://ejohn.org/blog/simple-javascript-inheritance/
 [mit]: http://opensource.org/licenses/mit-license.php
 [node]: http://nodejs.org/
 [travis]: https://secure.travis-ci.org/rowanmanning/chic
