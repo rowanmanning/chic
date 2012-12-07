@@ -11,6 +11,6 @@
     "bugs": "https://github.com/rowanmanning/chic/issues",
 
     "scripts": [
-        "index.js"
+        "lib/chic.js"
     ]
 }
