@@ -5,7 +5,9 @@ Chic
 Chic is an extremely simple class-like interface to JavaScript prototypal inheritance.
 
 **Current Version:** *0.0.2*  
-**Automated Build Status:** [![Build Status][travis-status]][travis]
+**Automated Build Status:** [![Build Status][travis-status]][travis]  
+**Node Support:** *0.6, 0.8*  
+**Browser Support:** *Android Browser 2.2–4.2, Firefox 3.6, Firefox 4–16, Google Chrome 14–23, Internet Explorer 6–10, Mobile Safari iOS 4–6, Opera 12.10, Safari 5–6*
 
 
 Getting Started
