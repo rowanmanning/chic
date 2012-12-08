@@ -41,7 +41,13 @@ In Node.js or using Component, you can include Chic in your script by using requ
 var Class = require('chic').Class;
 ```
 
-If you're just including with a `<script>`, you're all ready to go. The rest of the examples assume you've got the `Class` variable already.
+If you're just including with a `<script>`, `Class` is available in the `chic` namespace:
+
+```js
+var Class = chic.Class;
+```
+
+The rest of the examples assume you've got the `Class` variable already.
 
 ### Create a class
 
