@@ -28,6 +28,14 @@
         res.sendfile(root + '/node_modules/mocha/mocha.' + req.params[0]);
     });
 
+    // IE lte8 test files
+    app.get('/legacy', function (req, res) {
+        res.sendfile(dir + '/legacy.html');
+    });
+    app.get('/chic.js', function (req, res) {
+        res.sendfile(root + '/lib/chic.js');
+    });
+
     // JavaScript bundler
     app.get('/test.js', function (req, res) {
         var bundler = browserify();
