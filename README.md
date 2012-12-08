@@ -41,8 +41,6 @@ var Class = require('chic').Class;
 
 If you're just including with a `<script>`, you're all ready to go. The rest of the examples assume you've got the `Class` variable already.
 
-----------
-
 ### Create a class
 
 Creating classes is very simple. You extend the base class like this:
@@ -71,8 +69,6 @@ var Animal = Class.extend({
 });
 ```
 
-----------
-
 ### Instantiating a class
 
 Instantiating your new class is just like instantiating any other JavaScript class now. You'll be able to use all those methods you defined!
@@ -81,8 +77,6 @@ Instantiating your new class is just like instantiating any other JavaScript cla
 var fluffy = new Animal();
 fluffy.poop(); // Bad Fluffy!
 ```
-
-----------
 
 ### Extending classes
 
@@ -133,16 +127,43 @@ var pet = new Cat('Mr Tibbles');
 pet.eat(); // Mr Tibbles is eating like a good kitty
 ```
 
-----------
-
-
 
 Development
 -----------
 
-* Install dependencies with `npm install`
-* Run tests with `npm test`
-* Lint code with `npm run-script lint`
+To develop Chic, you'll need to clone the repo and install dependencies:
+
+```sh
+$ npm install
+```
+
+No code will be accepted unless all tests are passing and there are no lint errors. Commands are outlined below:
+
+### Lint code
+
+Run JSHint with the correct config against the code-base:
+
+```sh
+$ npm run-script lint
+```
+
+### Run unit tests (CLI)
+
+Run unit tests on the command line in a Node environment:
+
+```sh
+$ npm test
+```
+
+### Run unit tests (browser)
+
+To run unit tests in supported browsers, you need to run a small express app to serve the files (this bundles test together to make managing them a lot easier):
+
+```sh
+$ npm run-script testapp
+```
+
+Now you will be able to visit `http://localhost:3893/` in your browsers to run the tests. The app will automatically restart whenever a JavaScript file changes locally, so re-running the tests is just a case of reloading the page.
 
 
 Credit
