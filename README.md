@@ -173,7 +173,7 @@ $ npm run-script testapp
 
 Now you will be able to visit `http://localhost:3893/` in your browsers to run the tests. The app will automatically restart whenever a JavaScript file changes locally, so re-running the tests is just a case of reloading the page.
 
-Unfortunately, my testing tools don't work correctly in Firefox 3.6 and IE 6–8. Becuase of this, there is a stripped down test suite available on `http://localhost:3893/legacy` which caters for these browsers.
+Unfortunately, my testing tools don't work correctly in Firefox 3.6 and IE 6–8. Because of this, there is a stripped down test suite available on `http://localhost:3893/legacy` which caters for these browsers.
 
 
 Credit
