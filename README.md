@@ -13,22 +13,22 @@ Chic is an extremely simple class-like interface to JavaScript prototypal inheri
 Getting Started
 ---------------
 
-You can use Chic in-browser or on the server side with [Node.js][node]. On the client side, you can either install Chic through [Component][component]:
+You can use Chic on the server side with [Node.js][node] and npm:
+
+```sh
+$ npm install chic
+```
+
+On the client side, you can either install Chic through [Component][component]:
 
 ```sh
 $ component install rowanmanning/chic
 ```
 
-Or by simply including `chic.js` in your page:
+or by simply including `chic.js` in your page:
 
 ```html
 <script src="path/to/lib/chic.js"></script>
-```
-
-On the server side, install with npm:
-
-```sh
-$ npm install chic
 ```
 
 
