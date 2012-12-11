@@ -3,6 +3,13 @@ Chic ChangeLog
 ==============
 
 
+1.0.0 (2012-12-11)
+------------------
+
+* API changes for non-dependency-managed users
+* Stable release
+
+
 0.0.3 (2012-12-08)
 ------------------
 
