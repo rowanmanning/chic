@@ -1,5 +1,6 @@
 .travis.yml
 build
+component.json
 node_modules
 npm-debug.log
 test
