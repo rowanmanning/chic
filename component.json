@@ -5,11 +5,13 @@
     "description": "Chic is an extremely simple class-like interface to JavaScript prototypal inheritance",
     "keywords": [ "class", "classes", "extend", "inheritance", "oop", "prototypal", "prototype" ],
     "author": "Rowan Manning (http://rowanmanning.co.uk/)",
+    "license": "MIT",
 
     "repo": "rowanmanning/chic",
     "homepage": "https://github.com/rowanmanning/chic",
     "bugs": "https://github.com/rowanmanning/chic/issues",
 
+    "main": "lib/chic.js",
     "scripts": [
         "lib/chic.js"
     ]
