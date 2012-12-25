@@ -2,7 +2,7 @@
 /*global setup, suite, test */
 (function () {
     'use strict';
-    
+
     // Dependencies
     var assert = require('chai').assert;
     var sinon = require('sinon');
@@ -24,6 +24,32 @@
 
         test('should have a Class.extend function', function () {
             assert.isFunction(Class.extend);
+        });
+
+        suite('Class:', function () {
+            var ExtendableBaseClass, foo;
+
+            function Parent() {}
+
+            setup(function () {
+                foo = sinon.spy();
+                Parent.prototype.foo = foo;
+            });
+
+            test('calling it without a function should do nothing and return undefined', function () {
+                assert.isUndefined(chic.Class());
+            });
+
+            test('calling it with a function should return another function with the same prototype', function () {
+                ExtendableBaseClass = chic.Class(Parent);
+                assert.notStrictEqual(ExtendableBaseClass, Parent);
+                assert.strictEqual(ExtendableBaseClass.prototype, Parent.prototype);
+            });
+
+            test('the returned function should have a Class.extend function', function () {
+                assert.strictEqual(ExtendableBaseClass.extend, Class.extend);
+            });
+
         });
 
         suite('MyClass:', function () {
@@ -139,6 +165,43 @@
             test('calling this.sup should call the original class method with the new instance as a context', function () {
                 instance.bar();
                 assert.strictEqual(bar.firstCall.thisValue, instance);
+            });
+
+        });
+
+        suite('MyClass extending SomeConstructor:', function () {
+            var MyClass, myClass;
+
+            function SomeConstructor() {
+                this.bar = 'bar';
+            }
+
+            SomeConstructor.prototype.foo = function () {};
+
+            setup(function () {
+                MyClass = new Class(SomeConstructor).extend({
+                    getBar: function () {
+                        return this.bar;
+                    }
+                });
+                myClass = new MyClass();
+            });
+
+            test('instanceof should work as expected', function () {
+                assert.instanceOf(myClass, MyClass);
+                assert.instanceOf(myClass, SomeConstructor);
+            });
+
+            test('the parent constructor should not be called on the prototype', function () {
+                assert.isUndefined(MyClass.prototype.bar);
+            });
+
+            test('the parent constructor should be called when the instance is created', function () {
+                assert.strictEqual(myClass.bar, 'bar');
+            });
+
+            test('extending should work as expected', function () {
+                assert.strictEqual(myClass.getBar(), 'bar');
             });
 
         });

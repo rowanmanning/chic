@@ -5,6 +5,8 @@
     
     // Dependencies
     var assert = require('chai').assert;
+    var sinon = require('sinon');
+    var EventEmitter = require('events').EventEmitter;
 
     // Test subject
     var chic = require('../../lib/chic');
@@ -58,6 +60,25 @@
             assert.instanceOf(mrTibbles, Cat);
             assert.strictEqual(mrTibbles.eat(), 'Mr Tibbles is eating like a good kitty');
 
+        });
+
+        test('EventEmitters', function () {
+            var MyEventEmitter, myEventEmitter, eventHandler;
+
+            MyEventEmitter = new Class(EventEmitter).extend({
+                emit: function (event) {
+                    this.sup(event);
+                },
+                fire: function () {
+                    this.emit.apply(this, arguments);
+                }
+            });
+            myEventEmitter = new MyEventEmitter();
+            eventHandler = sinon.spy();
+
+            myEventEmitter.on('test', eventHandler);
+            myEventEmitter.emit('test');
+            assert.strictEqual(eventHandler.calledOnce, true);
         });
 
     });
