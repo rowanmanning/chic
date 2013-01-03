@@ -193,5 +193,5 @@ Chic is licensed under the [MIT][mit] license.
 [inspiration]: http://ejohn.org/blog/simple-javascript-inheritance/
 [mit]: http://opensource.org/licenses/mit-license.php
 [node]: http://nodejs.org/
-[travis]: https://secure.travis-ci.org/rowanmanning/chic
-[travis-status]: https://secure.travis-ci.org/rowanmanning/chic.png?branch=master
+[travis]: https://travis-ci.org/rowanmanning/chic
+[travis-status]: https://travis-ci.org/rowanmanning/chic.png?branch=master
