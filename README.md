@@ -1,4 +1,3 @@
-
 Chic
 ====
 
@@ -136,6 +135,12 @@ pet.eat(); // Mr Tibbles is eating like a good kitty
 ```
 
 
+Extending Non-Chic Classes
+--------------------------
+
+This feature is planned, and will be introduced in the near future. In the meantime, [@jhnns][jhnns] has this functionality working [in his fork][jhnns-fork].
+
+
 Development
 -----------
 
@@ -191,6 +196,8 @@ Chic is licensed under the [MIT][mit] license.
 
 [component]: https://github.com/component/component
 [inspiration]: http://ejohn.org/blog/simple-javascript-inheritance/
+[jhnns]: https://github.com/jhnns
+[jhnns-fork]: https://github.com/jhnns/chic/tree/extendConstructor
 [mit]: http://opensource.org/licenses/mit-license.php
 [node]: http://nodejs.org/
 [travis]: https://travis-ci.org/rowanmanning/chic
