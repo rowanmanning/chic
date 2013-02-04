@@ -3,6 +3,13 @@ Chic ChangeLog
 ==============
 
 
+1.0.2 (2013-02-04)
+------------------
+
+* Overhaul of build tools
+* Fix issues with a 'sup' property being created on objects
+
+
 1.0.1 (2012-12-13)
 ------------------
 
