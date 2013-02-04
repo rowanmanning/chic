@@ -1,4 +1,4 @@
-/*jshint maxlen: 140 */
+/*jshint maxlen: 140, maxstatements: 20 */
 /*global beforeEach, describe, it */
 (function () {
     'use strict';
@@ -86,6 +86,17 @@
             it('calling a method should call the original function with the instance as a context', function () {
                 instance.foo();
                 assert.strictEqual(foo.firstCall.thisValue, instance);
+            });
+
+            it('calling a method should not leave a \'sup\' property lying around', function () {
+                instance.foo();
+                assert.isFalse(instance.hasOwnProperty('sup'));
+            });
+
+            it('calling a method when the \'sup\' property is set should not alter it', function () {
+                instance.sup = true;
+                instance.foo();
+                assert.isTrue(instance.sup);
             });
 
         });
