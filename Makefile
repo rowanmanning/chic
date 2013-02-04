@@ -22,7 +22,6 @@ test: test-unit test-integ
 test-unit:
 	@echo "Running unit tests..."
 	@./node_modules/.bin/mocha \
-		--ui tdd \
 		--reporter spec \
 		--colors \
 		--recursive \
@@ -32,7 +31,6 @@ test-unit:
 test-integ:
 	@echo "Running integration tests..."
 	@./node_modules/.bin/mocha \
-		--ui tdd \
 		--reporter spec \
 		--colors \
 		--recursive \

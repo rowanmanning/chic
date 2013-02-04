@@ -1,5 +1,5 @@
 /*jshint maxstatements: 100 */
-/*global suite, test */
+/*global describe, it */
 (function () {
     'use strict';
     
@@ -11,10 +11,10 @@
     var Class = chic.Class;
 
     // Test suite
-    suite('chic (integration):', function () {
+    describe('chic (integration):', function () {
 
         // Test class extension
-        test('Animals', function () {
+        it('Animals', function () {
 
             var Animal = Class.extend({
                 init: function () {
