@@ -60,6 +60,18 @@
 
         });
 
+        // Test class extension
+        it('Dates', function () {
+
+            var MyDate = Class.extend(Date, {});
+
+            var date = new MyDate(1988, 0, 26);
+            assert.instanceOf(date, Date);
+            assert.isFunction(date.getFullYear);
+            assert.strictEqual(date.getFullYear(), 1988);
+
+        });
+
     });
 
 } ());

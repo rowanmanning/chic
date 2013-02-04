@@ -143,6 +143,41 @@
 
         });
 
+        describe('MyClass extending non-chic class:', function () {
+            var init, MyParentClass, MyClass, instance;
+
+            beforeEach(function () {
+                init = sinon.spy();
+                MyParentClass = sinon.spy();
+                MyParentClass.prototype.foo = sinon.spy();
+                MyClass = Class.extend(MyParentClass, {
+                    init: init,
+                    bar: 123
+                });
+                instance = new MyClass('foo', 'bar', 'baz');
+            });
+
+            it('MyParentClass constructor should be called with the expected arguments', function () {
+                assert.isTrue(MyParentClass.withArgs('foo', 'bar', 'baz').calledOnce());
+                assert.isTrue(MyParentClass.calledWithNew());
+            });
+
+            it('instance of MyClass should be an instance of MyParentClass', function () {
+                assert.instanceOf(instance, MyParentClass);
+            });
+
+            it('prototype should mirror properties of the original argument', function () {
+                assert.isDefined(MyClass.prototype.foo);
+                assert.isDefined(MyClass.prototype.bar);
+            });
+
+            it('calling a method should call the original function', function () {
+                instance.foo();
+                assert.isTrue(MyParentClass.prototype.foo.calledOnce);
+            });
+
+        });
+
     });
 
 } ());
