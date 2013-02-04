@@ -157,7 +157,7 @@ No code will be accepted unless all tests are passing and there are no lint erro
 Run JSHint with the correct config against the code-base:
 
 ```sh
-$ npm run-script lint
+$ make lint
 ```
 
 ### Run unit tests (CLI)
@@ -165,7 +165,7 @@ $ npm run-script lint
 Run unit tests on the command line in a Node environment:
 
 ```sh
-$ npm test
+$ make test
 ```
 
 ### Run unit tests (browser)
@@ -173,7 +173,7 @@ $ npm test
 To run unit tests in supported browsers, you need to run a small express app to serve the files (this bundles test together to make managing them a lot easier):
 
 ```sh
-$ npm run-script testapp
+$ make test-server
 ```
 
 Now you will be able to visit `http://localhost:3893/` in your browsers to run the tests. The app will automatically restart whenever a JavaScript file changes locally, so re-running the tests is just a case of reloading the page.
