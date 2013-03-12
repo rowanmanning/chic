@@ -14,6 +14,15 @@
     // Test suite
     describe('chic (unit):', function () {
 
+        beforeEach(function (done) {
+            // Nasty hack to prevent stack space errors in IE
+            // https://github.com/visionmedia/mocha/issues/502
+            // (also function wrapper fixes error in Firefox 3.6)
+            setTimeout(function () {
+                done();
+            }, 0);
+        });
+
         it('should be an object', function () {
             assert.isObject(chic);
         });

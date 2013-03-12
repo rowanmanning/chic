@@ -1,5 +1,5 @@
 /*jshint maxstatements: 100 */
-/*global describe, it */
+/*global beforeEach, describe, it */
 (function () {
     'use strict';
     
@@ -12,6 +12,15 @@
 
     // Test suite
     describe('chic (integration):', function () {
+
+        beforeEach(function (done) {
+            // Nasty hack to prevent stack space errors in IE
+            // https://github.com/visionmedia/mocha/issues/502
+            // (also function wrapper fixes error in Firefox 3.6)
+            setTimeout(function () {
+                done();
+            }, 0);
+        });
 
         // Test class extension
         it('Animals', function () {
