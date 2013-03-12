@@ -146,41 +146,24 @@ This feature is planned, and will be introduced in the near future. In the meant
 Development
 -----------
 
-To develop Chic, you'll need to clone the repo and install dependencies:
+To develop Chic, you'll need to clone the repo and install dependencies with `make deps`. If you're on Windows, you'll also need to install [Make for Windows][make].
+
+Once you're set up, you can run the following commands:
 
 ```sh
-$ npm install
+$ make deps         # Install dependencies
+$ make lint         # Run JSHint with the correct config
+$ make test         # Run unit tests in Node
+$ make test-server  # Run a server for browser unit testing (visit localhost:3000)
 ```
 
-No code will be accepted unless all tests are passing and there are no lint errors. Commands are outlined below:
-
-### Lint code
-
-Run JSHint with the correct config against the code-base:
+When no build target is specified, make will run `deps lint test`. This means you can use the following command for brevity:
 
 ```sh
-$ make lint
+$ make
 ```
 
-### Run unit tests (CLI)
-
-Run unit tests on the command line in a Node environment:
-
-```sh
-$ make test
-```
-
-### Run unit tests (browser)
-
-To run unit tests in supported browsers, you need to run a small express app to serve the files (this bundles test together to make managing them a lot easier):
-
-```sh
-$ make test-server
-```
-
-Now you will be able to visit `http://localhost:3893/` in your browsers to run the tests. The app will automatically restart whenever a JavaScript file changes locally, so re-running the tests is just a case of reloading the page.
-
-Unfortunately, my testing tools don't work correctly in Firefox 3.6 and IE 6–8. Because of this, there is a stripped down test suite available on `http://localhost:3893/legacy` which caters for these browsers.
+Code with lint errors or no/failing tests will not be accepted, please use the build tools outlined above.
 
 
 Credit
@@ -200,6 +183,7 @@ Chic is licensed under the [MIT][mit] license.
 [inspiration]: http://ejohn.org/blog/simple-javascript-inheritance/
 [jhnns]: https://github.com/jhnns
 [jhnns-fork]: https://github.com/jhnns/chic/tree/extendConstructor
+[make]: http://gnuwin32.sourceforge.net/packages/make.htm
 [mit]: http://opensource.org/licenses/mit-license.php
 [node]: http://nodejs.org/
 [travis]: https://travis-ci.org/rowanmanning/chic
