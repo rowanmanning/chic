@@ -12,7 +12,7 @@
     var app = express();
 
     // Basic config
-    var port = 3893;
+    var port = 3000;
     var dir = __dirname;
     var root = path.resolve(__dirname + '/../../');
     var testPattern = root + '/test/{integ,unit}/**.js';
@@ -26,14 +26,6 @@
     });
     app.get(/^\/mocha\.(js|css)$/, function (req, res) {
         res.sendfile(root + '/node_modules/mocha/mocha.' + req.params[0]);
-    });
-
-    // IE lte8 test files
-    app.get('/legacy', function (req, res) {
-        res.sendfile(dir + '/legacy.html');
-    });
-    app.get('/chic.js', function (req, res) {
-        res.sendfile(root + '/lib/chic.js');
     });
 
     // JavaScript bundler
