@@ -2,6 +2,13 @@
 Chic ChangeLog
 ==============
 
+1.0.3 (2013-03-12)
+------------------
+
+* Support AMD-style module loaders
+* Support Node 0.10.x
+* General house-keeping
+
 
 1.0.2 (2013-02-04)
 ------------------
