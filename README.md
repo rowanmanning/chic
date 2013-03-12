@@ -40,6 +40,8 @@ In Node.js or using Component, you can include Chic in your script by using requ
 var Class = require('chic').Class;
 ```
 
+Chic also works with AMD-style module loaders, just specify it as a dependency.
+
 If you're just including with a `<script>`, `Class` is available in the `chic` namespace:
 
 ```js
