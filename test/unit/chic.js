@@ -4,7 +4,7 @@
     'use strict';
     
     // Dependencies
-    var assert = require('chai').assert;
+    var assert = require('proclaim');
     var sinon = require('sinon');
 
     // Test subject
@@ -70,7 +70,7 @@
             });
 
             it('instance of MyClass should be an instance of Class', function () {
-                assert.instanceOf(instance, Class);
+                assert.isInstanceOf(instance, Class);
             });
 
             it('calling a method should call the original function', function () {
@@ -130,11 +130,11 @@
             });
 
             it('instance of MyOtherClass should be an instance of Class', function () {
-                assert.instanceOf(instance, Class);
+                assert.isInstanceOf(instance, Class);
             });
 
             it('instance of MyOtherClass should be an instance of MyClass', function () {
-                assert.instanceOf(instance, MyClass);
+                assert.isInstanceOf(instance, MyClass);
             });
 
             it('calling an overridden method should not call the original class method', function () {

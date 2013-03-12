@@ -4,7 +4,7 @@
     'use strict';
     
     // Dependencies
-    var assert = require('chai').assert;
+    var assert = require('proclaim');
 
     // Test subject
     var chic = require('../../lib/chic');
@@ -41,21 +41,21 @@
             });
 
             var animal = new Animal();
-            assert.instanceOf(animal, Class);
-            assert.notInstanceOf(animal, Mammal);
+            assert.isInstanceOf(animal, Class);
+            assert.isNotInstanceOf(animal, Mammal);
             assert.strictEqual(animal.eat(), 'Animal is eating');
 
             var mammal = new Mammal();
-            assert.instanceOf(mammal, Class);
-            assert.instanceOf(mammal, Animal);
-            assert.notInstanceOf(mammal, Cat);
+            assert.isInstanceOf(mammal, Class);
+            assert.isInstanceOf(mammal, Animal);
+            assert.isNotInstanceOf(mammal, Cat);
             assert.strictEqual(mammal.eat(), 'Mammal is eating');
 
             var mrTibbles = new Cat('Mr Tibbles');
-            assert.instanceOf(mrTibbles, Class);
-            assert.instanceOf(mrTibbles, Animal);
-            assert.instanceOf(mrTibbles, Mammal);
-            assert.instanceOf(mrTibbles, Cat);
+            assert.isInstanceOf(mrTibbles, Class);
+            assert.isInstanceOf(mrTibbles, Animal);
+            assert.isInstanceOf(mrTibbles, Mammal);
+            assert.isInstanceOf(mrTibbles, Cat);
             assert.strictEqual(mrTibbles.eat(), 'Mr Tibbles is eating like a good kitty');
 
         });
