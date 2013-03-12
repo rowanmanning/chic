@@ -6,12 +6,16 @@
     "keywords": [ "class", "classes", "extend", "inheritance", "oop", "prototypal", "prototype" ],
     "author": "Rowan Manning (http://rowanmanning.co.uk/)",
 
-    "repository": { "type": "git", "url": "https://github.com/rowanmanning/chic.git" },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rowanmanning/chic.git"
+    },
     "homepage": "https://github.com/rowanmanning/chic",
     "bugs": "https://github.com/rowanmanning/chic/issues",
 
-    "engines": { "node": ">=0.6.0" },
-    "dependencies": {},
+    "engines": {
+        "node": ">=0.6"
+    },
     "devDependencies": {
         "browserify": "~1.16",
         "express": "~3.1",

@@ -11,8 +11,8 @@
     "homepage": "https://github.com/rowanmanning/chic",
     "bugs": "https://github.com/rowanmanning/chic/issues",
 
-    "main": "lib/chic.js",
+    "main": "./lib/chic.js",
     "scripts": [
-        "lib/chic.js"
+        "./lib/chic.js"
     ]
 }
