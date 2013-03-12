@@ -13,14 +13,14 @@
     "engines": { "node": ">=0.6.0" },
     "dependencies": {},
     "devDependencies": {
-        "browserify": "1.16.x",
-        "express": "3.0.x",
-        "glob": "3.1.x",
-        "jshint": "0.9.x",
-        "mocha": "1.7.x",
+        "browserify": "~1.16",
+        "express": "~3.1",
+        "glob": "~3.1",
+        "jshint": "~0.9",
+        "mocha": "~1.8",
         "proclaim": "~1.0",
-        "sinon": "1.5.x",
-        "supervisor": "0.5.x"
+        "sinon": "~1.6",
+        "supervisor": "~0.5"
     },
 
     "main": "./lib/chic",
