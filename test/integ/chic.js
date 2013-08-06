@@ -1,5 +1,5 @@
-/*jshint maxstatements: 100 */
-/*global beforeEach, describe, it */
+/* jshint maxstatements: 100 */
+/* global beforeEach, describe, it */
 (function () {
     'use strict';
     
