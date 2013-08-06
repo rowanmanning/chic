@@ -2,6 +2,14 @@
 Chic ChangeLog
 ==============
 
+1.1.0 (2013-08-06)
+------------------
+
+* Add Bower support
+* Update dependencies
+* Improve browser test runner
+
+
 1.0.3 (2013-03-12)
 ------------------
 
