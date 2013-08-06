@@ -39,4 +39,4 @@ test-integ:
 # Run the Node Test app for browser testing
 test-server:
 	@echo "Running test server..."
-	@./node_modules/.bin/supervisor -q ./test/runner/boot.js
+	@./node_modules/.bin/mocha-srv ./test
